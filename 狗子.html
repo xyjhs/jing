@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>周五我要看电影</title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            html,body{
+                height:100%;
+                overflow: hidden;
+            }
+            #lunbo{
+                border: 1px red solid;
+                width: 170px;
+                height: 120px;
+                margin: 100px auto;
+                /* text-align: none; */
+                background: skyblue;
+                /* overflow: hidden; */
+                list-style: none;
+            }
+            li{
+                display: inline-block;
+                list-style: none;
+                
+                /* position: relative; */
+                margin: 10px 10px;
+            }
+            img{
+                width: 150px;
+                height:100px;
+                
+            }   
+            #star-five{
+                margin: 50px 0;
+                position: relative;
+                display:block;
+                color: red;
+                width:0px;
+                height: 0px;
+                border-right: 100px solid transparent;
+                border-bottom: 70px soild transparent;
+                transform-origin: totate(35deg);
+
+            }
+            #star-five:before{
+                border-bottom: 80px solid  red;
+                border-right: 30px soild transparent;
+                border-left: 30px soild transparent;
+                position: absolute;
+                height: 0;
+                width: 0;
+                top: -45px;
+                left: -65px;
+                display: block;
+                content: "";
+                transform: rotate(-35deg);
+            }
+            #star-five::after{
+                position: absolute;
+                display: block;
+                color: red;
+                top:3px;
+                left: -105px;
+                width: 0;
+                height: 0;
+                border-right: 100px solid transparent;
+                border-bottom: 70px solid red;
+                border-left: 100px soild tarnsparent;
+                transform: rotate(-70deg);
+                content: "";
+            }
+            #img1{
+                background: yellowgreen;
+                transform: inherit;
+                border-radius: 50%;  
+            }
+        </style>
+    </head>
+    <body>
+       <ul id="lunbo">
+           <li><img src= "liangchaowei.jpg" title="这是我的帅照~~~~~"></li>
+           <li><img src="meinu.jpg" alt="这张图肯定是有的" title = "这是我的实习现状"></li>
+           <li><img src="gudu.jpg" alt="这也是一张有图片的img" title="这是肯定的"></li>
+           <li><img src="hupo.jpg" alt="这回我真的是要live" title="孤单无助的你"></li>
+       </ul> 
+       <div id="#star-five"></div>
+    </body>
+    <script>
+        // for(var i= 0;i<120;i++){
+        //     alert("周五去看电影不");
+        //     alert("肯定的呀~~~~~");
+        //     confirm("走走走");
+        // }
+        
+
+        //继承于原型的最终方案
+        function shape(){}
+        shape.prototype.name  = "shape";
+        shpae.prototype.string = function(){
+            return this.name;
+        }
+
+        function twoshape(){}
+        twoshape.prototype.name = "我要去旅行";
+        twoshape.protetype = shape.prototype;
+        twoshape.prototype.constructor = tweshape;
+        twoshpae.prototype.name = "2d shape";
+        
+        //将共享属性封装成函数
+        function tends(child,teap){
+            teap.prototype.name = "shape"
+            child.prototype = teap.prototype;
+            child.prototype.constructor = child;
+            
+        }
+        
+        //测试错误返回图片
+    </script>
+</html>
